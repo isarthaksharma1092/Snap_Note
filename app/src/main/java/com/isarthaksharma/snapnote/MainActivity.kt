@@ -65,6 +65,7 @@ class MainActivity : AppCompatActivity() {
                                 putExtra("DESCRIPTION", note.description)
                             }
                             startActivity(intent)
+                            notesAdaptor.refreshData(db.getAllNotes())
                         }
                     }
                     notesAdaptor.notifyItemChanged(position)
