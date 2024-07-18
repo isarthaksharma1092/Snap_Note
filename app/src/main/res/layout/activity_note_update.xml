@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".noteUpdate">
+
+        <LinearLayout
+            android:id="@+id/TopBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Left ImageView -->
+            <ImageView
+                android:id="@+id/goBackEditBtn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/cancel_note"
+                android:layout_gravity="left|center" />
+
+            <!-- Center TextView -->
+            <TextView
+                android:id="@+id/addNoteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Note"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <!-- Right ImageView -->
+            <ImageView
+                android:id="@+id/updateSaveBtn"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/check_note"
+                android:layout_gravity="end|center" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TopBanner">
+
+            <EditText
+                android:id="@+id/oldNoteEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+
+                android:background="@drawable/input_border"
+                android:backgroundTint="?android:colorBackground"
+                android:hint="Enter Note"
+                android:maxLines="2"
+                android:color="@color/Pink"
+                android:textCursorDrawable="@drawable/custom_curson"
+
+                android:padding="10dp"
+                android:textColor="@color/Skin"
+                android:textColorHint="@color/Skin"
+                android:textSize="18dp"
+                android:theme="@style/Theme.AddNote.TextBox" />
+
+            <EditText
+                android:id="@+id/oldNoteDescribe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_border"
+
+                android:backgroundTint="?android:colorBackground"
+                android:gravity="top"
+                android:hint="Enter more details here (Optional)"
+                android:padding="10dp"
+                android:textStyle="italic"
+                android:textCursorDrawable="@drawable/custom_curson"
+
+
+                android:textColor="@color/Skin"
+                android:textColorHint="@color/Skin"
+                android:textSize="18dp"
+                android:theme="@style/Theme.AddNote.TextBox" />
+        </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
