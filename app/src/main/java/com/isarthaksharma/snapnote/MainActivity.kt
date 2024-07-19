@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
             //adding note to recycler view
             binding.addNoteBtn.setOnClickListener{
                 startActivity(Intent(this,addNotes::class.java))
-                finish()
             }
 
             //swipeGesture

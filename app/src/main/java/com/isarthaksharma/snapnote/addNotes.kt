@@ -42,7 +42,7 @@ class addNotes : AppCompatActivity() {
                     val note = noteData(0,title,description)
                     db.insertNote(note)
                     finish()
-                    Toast.makeText(this,"Note Saved\nSuccessfully",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Note Saved",Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this,MainActivity::class.java))
                     finish()
                 }
